@@ -19,31 +19,31 @@ DDRC = 0xFF; PORTC = 0X00;
 unsigned char cntavail = 0;
     /* Insert your solution below */
     while (1) {
-if(cntavail != 0)
-{cntavail = 0;}
+
+cntavail = 4;
 
 if((PINA & 0x01) == 0x01)
 {
-cntavail++;
+cntavail--;
 }
 
 if((PINA & 0x02) == 0x02)
 {
-cntavail++;
+cntavail--;
 }
 
 if((PINA & 0x04) == 0x04)
 {
-cntavail++;
+cntavail--;
 }
 
 if((PINA & 0x08) == 0x08)
 {
-cntavail++;
+cntavail--;
 }
 
 PORTC = cntavail;
-if(cntavail == 4)
+if(cntavail == 0)
 PORTC = 0x8F;
 }
 }
