@@ -1,0 +1,13 @@
+Breakpoint 1 at 0x180: file source/main.c, line 29.
+Note: automatically using hardware breakpoints for read-only addresses.
+======================================================
+Running all tests..."
+
+"PINA: 0x00, PINB: 0x00, PINC: 0x00 => PORTD ** testing to see all 0's"..."PINA: 100, PINB: 100, PINC: 100 => PORTD ** testing balanced car GREATER than 140"...
+	Expected 301 
+	PORTD '0x80002b:	0x2d
+"PINA: 20, PINB 30, PINC 50 ** testing balanced car, less than 140"..."PINA: 20, PINB 30, PINC 90 ** testing a balanced car, where total IS 140"..."PINA: 30, PINB: 100, PINC: 120 ** testing an unbalanced car exceeding 140"...
+	Expected 253 
+	PORTD '0x80002b:	0xfb
+======================================================
+Quitting: Remote doesn't know how to detach
