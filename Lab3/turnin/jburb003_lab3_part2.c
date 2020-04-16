@@ -23,14 +23,17 @@ unsigned char tempA;
     /* Insert your solution below */
     while (1) {
 tempA = PINA & 0xFF; //copies the number on PINA into a variable
+if(tempA < 1){
+PORTC = 64;
+}
 
-if(tempA <= 2)
+else if((tempA <= 2) && (tempA >= 1))
 {
-PORTC = 32;
+PORTC = 32 + 64;
 }
 
 else if((tempA >= 3) && (tempA  <= 4)){
-PORTC= 48;
+PORTC= 48 + 64;
 }
 
 

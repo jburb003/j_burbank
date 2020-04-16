@@ -26,13 +26,16 @@ unsigned char temp_status;
 
 tempA = PINA & 0x0F; //copies the number on PINA while zeroing out the P4 thru p6
 temp_status = PINA & 0xF0; //copies only the upper nibble into another variable.
-if(tempA <= 2)
+if(tempA < 1)
+PORT = 64;
+
+else if((tempA <= 2) && (tempA >= 1))
 {
-PORTC = 32;
+PORTC = 32 + 64;
 }
 
 else if((tempA >= 3) && (tempA  <= 4)){
-PORTC= 48;
+PORTC= 48+64;
 }
 
 
