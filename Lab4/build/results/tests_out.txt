@@ -1,0 +1,7 @@
+Breakpoint 1 at 0x212: file source/main.c, line 74.
+Note: automatically using hardware breakpoints for read-only addresses.
+======================================================
+Running all tests..."
+
+"PINA: 0x00, state: Start => B: 1"...test/tests.gdb:33: Error in sourced command file:
+Remote connection closed
