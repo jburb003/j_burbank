@@ -44,7 +44,14 @@ continue 2
 expectPORTB 1
 checkResult
 
+#test 2
 
+test "Begin in light2, testing transition to light 1"
+set state = light2
+setPINA 0
+continue 2
+expectPORTB 1
+checkResult
 # Add tests below
 
 # Report on how many tests passed/tests ran

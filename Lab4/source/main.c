@@ -22,7 +22,7 @@ state = light1;
 break;
 
 case light1:
-if(PINA & 1)
+if((PINA & 1)== 0)
 {
 state = light1;
 }
@@ -33,7 +33,7 @@ state = light2;
 break;
 
 case light2:
-if(!(PINA & 1))
+if((PINA & 3) == 1)
 {
 state = light2;
 }
@@ -70,14 +70,12 @@ int main(void) {
     
 DDRB = 0xFF; PORTB = 0x00;
 DDRA = 0x00; PORTA = 0xFF;
+PORTB = 0x01;
+state = Start;
     /* Insert your solution below */
     while (1) {
-PINB = 0x01;
-state = Start;
-
-	while(1) {
 	Tick();
-    }
+    
     
 }
 
