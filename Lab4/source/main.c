@@ -30,10 +30,11 @@ state = check1;
 
 else
 {
-state = Init
+state = Init;
 }
 
 break;
+
 //check1 state 
 case check1:
 if((PINA & 0xFF) == 4)
@@ -63,12 +64,13 @@ break;
 //unlock state
 case unlock:
 if((PINA & 0x80) == 128)
-{state = lock}
+{state = lock;}
 
 else
 state = unlock;
 break;
 
+//lock state
 case lock:
 state = Init;
 break;
@@ -101,11 +103,11 @@ PORTC = 3;
 case lock:
 PORTB = 0;
 PORTC = 4;
-}
+
 
 default:
 break;
-
+}
 }
 int main(void) {
 DDRB = 0xFF; PORTB = 0x00;    

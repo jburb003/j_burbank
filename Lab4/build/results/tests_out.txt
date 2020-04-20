@@ -1,13 +1,7 @@
-Breakpoint 1 at 0x320: file source/main.c, line 114.
+Breakpoint 1 at 0x322: file source/main.c, line 118.
 Note: automatically using hardware breakpoints for read-only addresses.
 ======================================================
 Running all tests..."
 
-"PINA: 0x00, state: Start -> Init -> wait add 1 then decrement 2 then clear"..."decrement until 1"...
-	Expected 1 
-	PORTC '0x800028:	0x02
-"increment once"...
-	Expected 8 
-	PORTC '0x800028:	0x07
-"stay in initial state C = 7"...======================================================
+"correct sequence 4 -> 0 -> 2"...======================================================
 Quitting: Remote doesn't know how to detach
